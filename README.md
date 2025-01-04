@@ -15,7 +15,7 @@ The **Physics Addon** is an addon that adds physical effects to the Minecraft wo
 
 ## License
 
-[GNU GPL v3](LICENSE)
+[GPL v2.0](LICENSE)
 
 ## Contributions
 If you'd like to contribute to the project, feel free to open pull requests via GitHub.
