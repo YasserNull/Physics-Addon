@@ -50,6 +50,7 @@ world.beforeEvents.playerBreakBlock.subscribe((EventData) => {
        entity_block.triggerEvent("mc:block_physics");
         entity_block.applyImpulse({x: Math.random() * 0.6 - 0.3,y: 0.2,z: Math.random() * 0.6 - 0.3});
     }
-    blocks.runCommand("function kill029393939");          
+    blocks.runCommand("event entity @s mc:instant_despaw");
+    blocks.runComman("tp @s ~9999~9999~9999");          
 }) 
 })
