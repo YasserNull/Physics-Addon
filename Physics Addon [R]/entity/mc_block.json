@@ -14,15 +14,13 @@
             },
             "animations": {
                 "scale": "animation.block_scale",
-                "rotate": "animation.block_rotate",
-                "rotation": "animation.block_rotate"
+                "rotation": "animation.block_rotation"
             },
             "scripts": {
                 "animate": [
                     {
                         "scale": "query.skin_id == 0"
                     },
-                    "rotate",
                     {
                         "rotation": "!query.is_on_ground"
                     }
