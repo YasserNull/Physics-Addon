@@ -1,0 +1,35 @@
+{
+    "format_version": "1.19.0",
+    "animations": {
+        "animation.block_scale": {
+            "loop": true,
+            "bones": {
+                "model": {
+                    "position": [
+                        "query.is_baby ? 0 : -3.500",
+                        "query.is_baby ? 1 : -1",
+                        "query.is_baby ? 0 : 3.500"
+                    ],
+                    "scale": 0.891666667,
+                    "rotation": [
+                        -20,
+                        "query.is_baby ? 0.0 : -45",
+                        0.0
+                    ]
+                }
+            }
+        },
+        "animation.block_rotation": {
+            "loop": true,
+            "bones": {
+                "root": {
+                    "rotation": [
+                        "variable.x_rotation",
+                        "variable.y_rotation",
+                        "variable.z_rotation"
+                    ]
+                }
+            }
+        }
+    }
+}
