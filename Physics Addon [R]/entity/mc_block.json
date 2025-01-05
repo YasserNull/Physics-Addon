@@ -1,0 +1,61 @@
+{
+    "format_version": "1.19.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mc:block",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "geometry": {
+                "default": "geometry.block"
+            },
+            "textures": {
+                "default": "textures/entity/armor_stand"
+            },
+            "animations": {
+                "scale": "animation.block_scale",
+                "rotate": "animation.block_rotate",
+                "rotation": "animation.block_rotate"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "scale": "query.skin_id == 0"
+                    },
+                    "rotate",
+                    {
+                        "rotation": "!query.is_on_ground"
+                    }
+                ],
+                "initialize": [
+                    "variable.y_rotation = 0; variable.z_rotation = 0; variable.rotation_rate = 10;",
+                    "variable.x_rotation = 0; variable.x_rotation_rate = 20;",
+                    "variable.x_previous_position = q.position(0); variable.y_previous_position = q.position(1); variable.z_previous_position = q.position(2);",
+                    "variable.y_speed = 0; variable.z_speed = 0; variable.deceleration_rate = 0.05;",
+                    "variable.x_speed = 0; variable.x_deceleration_rate = 0.05;",
+                    "variable.x_direction = 0; variable.z_direction = 0;"
+                ],
+                "should_update_bones_and_effects_offscreen": true,
+                "pre_animation": [
+                    "variable.y_delta = Math.abs(q.position(1) - variable.y_previous_position); variable.y_previous_position = q.position(1);",
+                    "variable.y_lerped = Math.lerp(variable.y_speed, 0, variable.deceleration_rate/2);",
+                    "variable.y_speed = variable.y_lerped > variable.y_delta/8.5 ? variable.y_lerped : variable.y_delta/8.5;",
+                    "variable.z_delta = q.position(2) - variable.z_previous_position; variable.z_previous_position = q.position(2);",
+                    "variable.z_direction = Math.abs(variable.z_delta) > 0.01 ? variable.z_delta : variable.z_direction;",
+                    "variable.z_lerped = Math.lerp(variable.z_speed, 0, variable.deceleration_rate);",
+                    "variable.z_speed = Math.abs(variable.z_lerped) > Math.abs(variable.z_delta) ? variable.z_lerped : variable.z_delta; variable.z_speed = variable.z_speed + variable.z_direction * variable.y_speed;",
+                    "variable.z_rotation = variable.z_rotation + variable.z_speed * variable.rotation_rate;",
+                    "variable.x_delta = q.position(0) - variable.x_previous_position; variable.x_previous_position = q.position(0);",
+                    "variable.x_direction = Math.abs(variable.x_delta) > 0.01 ? variable.x_delta : variable.x_direction;",
+                    "variable.x_lerped = Math.lerp(variable.x_speed, 0, variable.x_deceleration_rate);",
+                    "variable.x_speed = Math.abs(variable.x_lerped) > Math.abs(variable.x_delta) ? variable.x_lerped : variable.x_delta; variable.x_speed = variable.x_speed + variable.x_direction * variable.y_speed;",
+                    "variable.x_rotation = variable.x_rotation + variable.x_speed * variable.x_rotation_rate;",
+                    "variable.y_rotation = variable.x_speed * variable.rotation_rate;"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}
