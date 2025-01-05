@@ -1,0 +1,22 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Physics Addon",
+    "description": "BY @YasserNull && FlizerX",
+    "uuid": "d9b6f1d5-8d30-4d0f-b01a-9cb5396d933b",
+    "version": [0, 0, 1],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "description": "BY @YasserNull && FlizerX",
+      "type": "resources",
+      "uuid": "f7e8a8e9-d9a4-4b45-9d7f-df9adf8b35ad",
+      "version": [0, 0, 1]
+    }
+  ],
+  "metadata": {
+    "authors": ["YasserNull","FlizerX"],
+    "url": "https://github.com/YasserNull/Physics-Addon"
+  }
+}
