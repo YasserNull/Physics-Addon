@@ -1,0 +1,94 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "mc:block",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "scripts": {
+                "animate": [
+                    {
+                        "1": "!query.is_moving"
+                    },
+                    "2",
+                    {
+                        "3": "q.is_on_fire"
+                    }
+                ]
+            },
+            "animations": {
+                "1": "animation.block_death",
+                "2": "animation.block_on_water",
+                "3": "animation.block_on_fire"
+            }
+        },
+        "component_groups": {
+            "death": {
+                "minecraft:instant_despawn": {}
+            },
+            "physics": {
+                "minecraft:physics": {
+                    "has_collision": true,
+                    "has_gravity": true
+                },
+                "minecraft:behavior.float": {
+                    "priority": 0
+                },
+                "minecraft:can_fly": {}
+            },
+            "is_baby": {
+                "minecraft:is_baby": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "block",
+                    "inanimate"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0,
+                "height": 0
+            },
+            "minecraft:scale": {
+                "value": 1.0
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:nameable": {},
+            "minecraft:persistent": {}
+        },
+        "events": {
+            "mc:instant_despawn": {
+                "add": {
+                    "component_groups": [
+                        "death"
+                    ]
+                }
+            },
+            "mc:block_physics": {
+                "add": {
+                    "component_groups": [
+                        "physics"
+                    ]
+                }
+            },
+            "mc:block_baby": {
+                "add": {
+                    "component_groups": [
+                        "is_baby"
+                    ]
+                }
+            }
+        },
+        "minecraft:pushable": {
+            "is_pushable": false,
+            "is_pushable_by_piston": true
+        }
+    }
