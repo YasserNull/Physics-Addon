@@ -1,0 +1,45 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.block_death": {
+            "timeline": {
+                "0.4": [
+                    "/event entity @s mc:instant_despawn",
+                    "/tp @s ~9999~9999~9999"
+                ],
+                "0.5": "/execute unless block ~~-1~ air run kill @s"
+            },
+            "animation_length": 0.6,
+            "loop": true
+        },
+        "animation.block_on_fire": {
+            "timeline": {
+                "0.0": [
+                    "/event entity @s mc:instant_despawn",
+                    "/tp @s ~9999~9999~9999"
+                ]
+            },
+            "animation_length": 0.01,
+            "loop": true
+        },
+        "animation.block_baby": {
+            "timeline": {
+                "0.0": [
+                    "/event entity @s mc:block_baby"
+                ]
+            },
+            "animation_length": 0.01,
+            "loop": false
+        },
+        "animation.block_on_water": {
+            "timeline": {
+                "0.0": [
+                    "/execute as @s if block ~~-0.1~ water if block ~~0.5~ air run tp @s ^^^",
+                    "/execute as @s if block ~~-0.1~ water run effect @s levitation 5 5 true",
+                    "/execute as @s if block ~~0.1~ air run effect @s levitation 0 0 true"
+                ]
+            },
+            "animation_length": 0.01,
+            "loop": true
+        }
+    }
