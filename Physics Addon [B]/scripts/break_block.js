@@ -46,4 +46,4 @@ world.afterEvents.playerBreakBlock.subscribe((e) => {
             });
         }
     });
-})
+});
