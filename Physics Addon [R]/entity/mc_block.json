@@ -7,22 +7,20 @@
                 "default": "entity_alphatest"
             },
             "geometry": {
-                "default": "geometry.block"
+                "default": "geometry.mc_block"
             },
             "textures": {
                 "default": "textures/entity/armor_stand"
             },
             "animations": {
-                "scale": "animation.block_scale",
-                "rotation": "animation.block_rotation"
+                "rotation": "animation.block_rotation",
+                "remove": "animation.remove_block"
             },
             "scripts": {
                 "animate": [
+                    "rotation",
                     {
-                        "scale": "query.skin_id == 0"
-                    },
-                    {
-                        "rotation": "!query.is_on_ground"
+                        "remove": "q.is_baby && q.variant == 1"
                     }
                 ],
                 "initialize": [
