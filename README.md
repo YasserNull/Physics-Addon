@@ -2,8 +2,7 @@
 The **Physics Addon** is an addon that adds physical effects to the Minecraft world.
 ## Features
 ### Block Breaking
-- Apparently : When a player breaks a block, small fragments appear and then disappear.
-- Programmatically: When a block is broken, 27 creatures appear in the shape of the broken block and are pushed in random directions.
+When a player breaks a block, small fragments appear and then disappear.
 
 ## Install Physics Addon
 
