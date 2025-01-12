@@ -2,14 +2,14 @@
   "format_version": 2,
   "header": {
     "name": "Physics Addon",
-    "description": "BY @YasserNull && FlizerX",
+    "description": "BY YasserNull && FlizerX",
     "uuid": "a9c73a9d-4779-4a4b-a3a1-3b7fdf0736a9",
     "version": [1, 0, 0],
     "min_engine_version": [1, 21, 0]
   },
   "modules": [
     {
-      "description": "BY @YasserNull && FlizerX",
+      "description": "BY YasserNull && FlizerX",
       "type": "data",
       "uuid": "8f1b8c85-4d7b-4d62-9637-8a5f9282e5cd",
       "version": [1, 0, 0]
