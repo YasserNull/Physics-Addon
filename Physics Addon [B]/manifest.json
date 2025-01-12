@@ -19,7 +19,7 @@
        "anguage": "javascript",
       "uuid": "b2e1a1f4-4f83-4b1d-92f7-68271fddf3db",
       "version": [1, 0, 0],
-      "entry": "main.js"
+      "entry": "index.js"
     }
   ],
   "dependencies": [
