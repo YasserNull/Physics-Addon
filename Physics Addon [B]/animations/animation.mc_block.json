@@ -1,0 +1,33 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.remove_block": {
+            "timeline": {
+                "0.3": "/event entity @s mc:remove_block",
+                "0.5": "/tp @s ~999~999~999",
+                "0.7": "/kill @s"
+            },
+            "animation_length": 0.7,
+            "loop": false
+        },
+        "animation.block_in_water": {
+            "timeline": {
+                "0.0": [
+                    "/execute if block ~~~ water unless block ~~0.1~ air run tp @s ~~0.1~"
+                ]
+            },
+            "animation_length": 0.01,
+            "loop": true
+        },
+        "animation.block_in_lava": {
+            "timeline": {
+                "0.0": [
+                    "/replaceitem entity @s slot.weapon.mainhand 0 black_concrete",
+                    "/execute if block ~~~ lava unless block ~~0.1~ air run tp @s ~~0.1~"
+                ]
+            },
+            "animation_length": 0.01,
+            "loop": true
+        }
+    }
+}
