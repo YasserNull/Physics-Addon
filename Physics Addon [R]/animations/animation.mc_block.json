@@ -1,0 +1,72 @@
+{
+    "format_version": "1.19.0",
+    "animations": {
+        "animation.block_rotation": {
+            "loop": true,
+            "bones": {
+                "root": {
+                    "rotation": [
+                        "variable.x_rotation",
+                        "variable.y_rotation",
+                        "variable.z_rotation"
+                    ]
+                }
+            }
+        },
+        "animation.remove_block": {
+            "loop": false,
+            "animation_length": 0.4,
+            "bones": {
+                "root": {
+                    "scale": {
+                        "0.0": [
+                            0.8,
+                            0.8,
+                            0.8
+                        ],
+                        "0.05": [
+                            0.7,
+                            0.7,
+                            0.7
+                        ],
+                        "0.1": [
+                            0.6,
+                            0.6,
+                            0.6
+                        ],
+                        "0.15": [
+                            0.5,
+                            0.5,
+                            0.5
+                        ],
+                        "0.2": [
+                            0.4,
+                            0.4,
+                            0.4
+                        ],
+                        "0.25": [
+                            0.3,
+                            0.3,
+                            0.3
+                        ],
+                        "0.3": [
+                            0.2,
+                            0.2,
+                            0.2
+                        ],
+                        "0.35": [
+                            0.1,
+                            0.1,
+                            0.1
+                        ],
+                        "0.4": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
