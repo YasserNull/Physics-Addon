@@ -20,7 +20,7 @@
                 ]
             },
             "animations": {
-                "1": "animation.remove_block",
+                "1": "animation.despawn_block",
                 "2": "animation.block_in_water",
                 "3": "animation.block_in_lava"
             }
@@ -42,8 +42,11 @@
                     "value": 2.7
                 }
             },
-            "mc:remove_block": {
+            "mc:despawn_animation": {
                 "minecraft:is_baby": {}
+            },
+            "mc:despawn": {
+                "minecraft:despawn": {}
             }
         },
         "components": {
@@ -89,10 +92,17 @@
                     ]
                 }
             },
-            "mc:remove_block": {
+            "mc:despawn_animation": {
                 "add": {
                     "component_groups": [
-                        "mc:remove_block"
+                        "mc:despawn_animation"
+                    ]
+                }
+            },
+            "mc:despawn": {
+                "add": {
+                    "component_groups": [
+                        "mc:despawn"
                     ]
                 }
             }
