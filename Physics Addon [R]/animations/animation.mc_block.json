@@ -13,7 +13,7 @@
                 }
             }
         },
-        "animation.remove_block": {
+        "animation.despawn_block": {
             "loop": false,
             "animation_length": 0.4,
             "bones": {
