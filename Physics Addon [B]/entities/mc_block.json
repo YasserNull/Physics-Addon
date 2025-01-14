@@ -73,10 +73,18 @@
                 "priority": 0
             },
             "minecraft:can_fly": {},
-            "minecraft:is_stackable": {},
+          //  "minecraft:is_stackable": {},
             "minecraft:nameable": {},
-            "minecraft:persistent": {}
-        },
+            "minecraft:persistent": {},
+       
+            "minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 10, 
+        "max_dropped_ticks": 1, 
+        "use_motion_prediction_hints": false 
+    }
+}
+},
         "events": {
             "mc:break_block": {
                 "add": {
