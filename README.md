@@ -1,5 +1,9 @@
 # Physics Addon
 The **Physics Addon** is an addon that adds physical effects to the Minecraft world.
+
+## Authors
+This project is developed by [YasserNull](https://github.com/YasserNull) and [FilzerX]().
+
 ## Features
 ### Block Breaking
 When a player breaks a block, small fragments appear and then disappear.
