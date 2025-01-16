@@ -8,25 +8,6 @@
             },
             "animation_length": 1,
             "loop": false
-        },
-     /*   "animation.block_in_water": {
-            "timeline": {
-                "0.0": [
-                    "/execute if block ~~~ water unless block ~~0.1~ air run tp @s ~~0.1~"
-                ]
-            },
-            "animation_length": 0.01,
-            "loop": true
-        },
-        "animation.block_in_lava": {
-            "timeline": {
-                "0.0": [
-                    "/replaceitem entity @s slot.weapon.mainhand 0 black_concrete",
-                    "/execute if block ~~~ lava unless block ~~0.1~ air run tp @s ~~0.1~"
-                ]
-            },
-            "animation_length": 0.01,
-            "loop": true
-        }*/
+        }
     }
 }
