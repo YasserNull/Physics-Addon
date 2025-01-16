@@ -8,7 +8,7 @@ This project is developed by [YasserNull](https://github.com/YasserNull) and [Fi
 + Block Breaking
 When a player breaks a block, small fragments appear and then disappear.
 
-![screenshot](https://imgur.com/OwJpNmL)
+![screenshot](https://imgur.com/AeoxLaF)
 
 ## Install Physics Addon
 
