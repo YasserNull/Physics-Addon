@@ -11,20 +11,10 @@
                     {
                         "1": "!query.is_moving && (q.variant == 1)"
                     }
- /*                   {
-                        "2": "query.is_in_water && (q.variant == 1 || q.variant == 2)"
-                    },
-                    {
-                        "3": "query.is_in_lava && (q.variant == 1 || q.variant == 2)"
-                    }*/
                 ]
             },
             "animations": {
                 "1": "animation.despawn_block"
-/*
-                "2": "animation.block_in_water",
-                "3": "animation.block_in_lava"
-*/
             }
         },
         "component_groups": {
@@ -71,10 +61,7 @@
                 "has_collision": true,
                 "has_gravity": true
             },
-           // "minecraft:can_fly": {},
-          //  "minecraft:is_stackable": {},
-      //      "minecraft:nameable": {},
-       //     "minecraft:persistent": {},
+      
        
             "minecraft:conditional_bandwidth_optimization": {
     "default_values": {
