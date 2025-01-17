@@ -61,16 +61,14 @@
                 "has_collision": true,
                 "has_gravity": true
             },
-      
-       
-            "minecraft:conditional_bandwidth_optimization": {
-    "default_values": {
-        "max_optimized_distance": 15, 
-        "max_dropped_ticks": 2, 
-        "use_motion_prediction_hints": false 
-    }
-}
-},
+           "minecraft:conditional_bandwidth_optimization": {
+               "default_values": {
+           	     "max_optimized_distance": 15, 
+                    "max_dropped_ticks": 2, 
+                   "use_motion_prediction_hints": false 
+               }
+          }
+     },
         "events": {
             "mc:break_block": {
                 "add": {
