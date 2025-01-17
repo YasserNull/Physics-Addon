@@ -6,7 +6,7 @@
                 "0.3": "@s mc:despawn_animation",
                 "0.5": "@s mc:despawn"
             },
-            "animation_length": 1,
+            "animation_length": 0.8,
             "loop": false
         }
     }
