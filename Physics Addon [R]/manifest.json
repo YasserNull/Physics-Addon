@@ -4,7 +4,7 @@
     "name": "Physics Addon",
     "description": "BY YasserNull && FlizerX",
     "uuid": "d9b6f1d5-8d30-4d0f-b01a-9cb5396d933b",
-    "version": [1, 0, 0],
+    "version": [2, 0, 0],
     "min_engine_version": [1, 20, 0]
   },
   "modules": [
@@ -12,7 +12,7 @@
       "description": "BY YasserNull && FlizerX",
       "type": "resources",
       "uuid": "f7e8a8e9-d9a4-4b45-9d7f-df9adf8b35ad",
-      "version": [1, 0, 0]
+      "version": [2, 0, 0]
     }
   ],
   "metadata": {
