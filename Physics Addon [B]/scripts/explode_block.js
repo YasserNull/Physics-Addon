@@ -1,5 +1,5 @@
 import { system, world } from "@minecraft/server";
-import { subtract } from "utilities.js";
+import { distance , getDirection } from "utilities.js";
 
 world.beforeEvents.explosion.subscribe((e) => {
     let center = e.source.location;
