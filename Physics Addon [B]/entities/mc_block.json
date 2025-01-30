@@ -9,7 +9,7 @@
             "scripts": {
                 "animate": [
                     {
-                        "1": "!query.is_moving",
+                        "1": "!query.is_moving"
                     }
                 ]
             },
