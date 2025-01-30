@@ -20,7 +20,7 @@
                 "animate": [
                     "rotation",
                     {
-                        "despawn": "q.is_baby && q.variant == 1"
+                        "despawn": "q.is_baby"
                     }
                 ],
                 "initialize": [
