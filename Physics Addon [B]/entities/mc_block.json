@@ -19,17 +19,11 @@
         },
         "component_groups": {
             "mc:break_block": {
-                "minecraft:variant": {
-                    "value": 1
-                },
                 "minecraft:scale": {
                     "value": 0.891666667
                 }
             },
             "mc:explode_block": {
-                "minecraft:variant": {
-                    "value": 2
-                },
                 "minecraft:scale": {
                     "value": 2.7
                 }
