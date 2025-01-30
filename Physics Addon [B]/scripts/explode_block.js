@@ -1,26 +1,38 @@
 import { system, world } from "@minecraft/server";
 import { subtract } from "utilities.js";
 
-let ExplosionLoc;
-let ExplosionPow;
-
 world.beforeEvents.explosion.subscribe((e) => {
-    ExplosionLoc = e.source.location;
-    ExplosionPow = Math.sqrt(parseInt(e.getImpactedBlocks().length) / Math.PI).toFixed(2);
-});
+    let center = e.source.location;
+    let power = Math.sqrt(e.getImpactedBlocks().length / Math.PI) * 2;
 
-world.afterEvents.blockExplode.subscribe((e) => {
-    const block = e.block;
-    const block_id = e.explodedBlockPermutation.type.id;
-    const impulseVector = {
-        x: (block.location.x - ExplosionLoc.x) * ExplosionPow,
-        y: (block.location.y - ExplosionLoc.y) * ExplosionPow,
-        z: (block.location.z - ExplosionLoc.z) * ExplosionPow
-    };
-    system.run(() => {
-        const mc_block = block.dimension.spawnEntity("mc:block", subtract(block.location, { x: -0.5, y: 0, z: -0.5 }));
-        mc_block.triggerEvent("mc:explode_block");
-        mc_block.runCommand(`replaceitem entity @s slot.weapon.mainhand 0 ${block_id}`);
-        mc_block.applyImpulse(impulseVector);
-    });
+    for (let block of e.getImpactedBlocks()) {
+        let type = block.typeId;
+        let blockCenter = block.center();
+        
+        // Calculate distance with a minimum value to avoid division by zero
+        let dist = Math.max(distance(center, blockCenter), 0.1);
+        
+        // Calculate the direction of the impulse
+        let direction = getDirection(center, blockCenter);
+        
+        // Inverse square law for force
+        let force = power / (dist * dist);
+        
+        // Apply a gradual height factor
+        let verticalBoost = 1 + (1 - Math.min(dist / 10, 1));
+        
+        // Calculate the final impulse
+        let impulse = {
+            x: direction.x * force,
+            y: direction.y * force * verticalBoost, // Increase height for nearby blocks
+            z: direction.z * force
+        };
+
+        system.run(() => {
+            const mc_block = block.dimension.spawnEntity("mc:block", blockCenter);
+            mc_block.triggerEvent("mc:explode_block");
+            mc_block.runCommand(`replaceitem entity @s slot.weapon.mainhand 0 ${type}`);
+            mc_block.applyImpulse(impulse);
+        });
+    }
 });
