@@ -39,9 +39,14 @@
       "memory_tier": 1
     },
     {
+      "folder_name": "medium",
+      "name": "medium",
+      "memory_tier": 2
+     },
+     {
       "folder_name": "high",
       "name": "High",
-      "memory_tier": 2
+      "memory_tier": 3
     }
   ]
 }
