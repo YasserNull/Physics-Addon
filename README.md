@@ -14,6 +14,12 @@ When a player breaks a block, small fragments appear and then disappear.
 
 ![Image](https://i.imgur.com/AeoxLaF.png)
 
+### Block Explosions
+
+When blocks explode, blocks appear and are physically propelled.
+
+![Image](https://i.imgur.com/B31SxiS.png)
+
 ## Install Physics Addon
 
 To install the Physics Addon, download the latest version from the following link:
