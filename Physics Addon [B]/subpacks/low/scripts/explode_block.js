@@ -4,7 +4,7 @@ import { distance , getDirection } from "utilities.js";
 world.beforeEvents.explosion.subscribe((e) => {
     let center = e.source.location;
     let power = Math.sqrt(e.getImpactedBlocks().length / Math.PI) * 2;
-    const exist_block_count = block.dimension.getEntities({ type: "mc:block" }).length;
+    const exist_block_count = center.dimension.getEntities({ type: "mc:block" }).length;
    
     let block_count;
     if (exist_block_count >= 12) {
