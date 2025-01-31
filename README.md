@@ -23,7 +23,7 @@ When blocks explode, blocks appear and are physically propelled.
 ### Physics Addon Settings
 This determines the limit of the explosive masses.
 
-![Image](https://i.imgur.com/SCCQudT.png)
+![Image](https://i.imgur.com/ckV3I5x.jpeg)
 
 ## Install Physics Addon
 
